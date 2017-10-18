@@ -23,4 +23,8 @@ CF templates are in JSON or YAML
 
 * Outputting data
   use Fn:GetAtt
+* by Default "automatic rollback on error" feature is enabled
+* you are charged for errors
+* Stacks can wait for application to be provisioned using the "WaitCondition"
+* Route53 is supported
 
