@@ -1,6 +1,15 @@
 Application Services
 ====================
 
+## Elastic Beanstalk
+You can have multiple versions of your apps
+Your apps can be split in to tiers (Web/app/DB)
+you can update your app: 1 instance at a time, a % of instance or an immutable update
+you can update your config
+you pay for the resources that you use but Elastic beanstalk is free
+Languages supported: Java, PHP, Python, Node.js, Ruby, .NET, Docker, Go
+
+
 ## SQS
 Simple Queue Services is web service that gives you access to a message queue. a temporary repository for messages that are awaiting processing
 
@@ -15,9 +24,13 @@ Two queues:
 - SQS is pull based
 - Messages are 256kb
 - messages kept in queue from 1 min to 14 days (default is 4 days)
-- Visibility Time Out is amount of time that the message is invisible to the SQS queue (max is 12 hours)
+- Visibility Time Out is amount of time that the message is invisible to the SQS queue (max is 12 hours), ChangeMessageVisibility()
 - guarantee that msgs will be processed at least once
 - SQS long polling can help decrease cost, since it doesn't return a response until a message arrives in the queue. Short polling instead returns immediately
+
+SQS Messages can be delivered multiple times and in any order
+
+
 
 ## SWF
 Simple Workflow Service is web service that makes it easy to coordinate work across distributed application components.
